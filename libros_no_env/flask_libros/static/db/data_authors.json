@@ -1,0 +1,9 @@
+[{"id":1, "name":"J. K. Rowling", "created_at":"2022-09-23 20:06:22", "updated_at":"2022-09-23 20:06:22"},
+ {"id":2, "name":"Gabriel Gacia Marquez", "created_at":"2022-09-23 20:06:22", "updated_at":"2022-09-23 20:06:22"},
+ {"id":3, "name":"Robert Louis Stevenson", "created_at":"2022-09-23 20:06:22", "updated_at":"2022-09-23 20:06:22"},
+ {"id":5, "name":"Romulo Gallegos", "created_at":"2022-09-23 20:06:22", "updated_at":"2022-09-23 20:06:22"},
+ {"id":6, "name":"Ernest Hemingway", "created_at":"2022-09-23 20:06:22", "updated_at":"2022-09-23 20:06:22"},
+ {"id":7, "name":"Sun Tzu", "created_at":"2022-09-23 20:06:22", "updated_at":"2022-09-23 20:06:22"},
+ {"id":8, "name":"Antoine de Saint-Exup\u00e9ry", "created_at":"2022-09-23 20:08:19", "updated_at":"2022-09-23 20:08:19"},
+ {"id":9, "name":"J. R. R. Tolkien", "created_at":"2022-09-24 01:07:35", "updated_at":"2022-09-24 01:07:35"},
+ {"id":12, "name":"Maria Luisa Bombal", "created_at":"2022-09-24 15:15:23", "updated_at":"2022-09-24 15:15:23"}]

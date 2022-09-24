@@ -1,0 +1,10 @@
+[{"id":1, "title":"Harry Potter y la Piedra Filosofal", "num_of_pages":223, "created_at":"2022-09-23 20:01:56", "updated_at":"2022-09-23 20:01:56"},
+ {"id":2, "title":"La Isla del Tesoro", "num_of_pages":292, "created_at":"2022-09-23 20:01:56", "updated_at":"2022-09-23 20:01:56"},
+ {"id":3, "title":"Cien Anos de Soledad", "num_of_pages":471, "created_at":"2022-09-23 20:01:56", "updated_at":"2022-09-23 20:01:56"},
+ {"id":4, "title":"El Arte de la Guerra", "num_of_pages":117, "created_at":"2022-09-23 20:01:56", "updated_at":"2022-09-23 20:01:56"},
+ {"id":5, "title":"La Ultima Niebla", "num_of_pages":212, "created_at":"2022-09-23 20:01:56", "updated_at":"2022-09-23 20:01:56"},
+ {"id":6, "title":"Dona Barbara", "num_of_pages":501, "created_at":"2022-09-23 20:01:56", "updated_at":"2022-09-23 20:01:56"},
+ {"id":7, "title":"El Principito", "num_of_pages":387, "created_at":"2022-09-23 20:01:56", "updated_at":"2022-09-23 20:01:56"},
+ {"id":8, "title":"El viejo y El Mar", "num_of_pages":194, "created_at":"2022-09-23 20:01:56", "updated_at":"2022-09-23 20:01:56"},
+ {"id":10, "title":"huckleberry finn", "num_of_pages":366, "created_at":"2022-09-24 09:09:24", "updated_at":"2022-09-24 09:09:24"},
+ {"id":11, "title":"El Senor de los Anillos la comunidad del anillo", "num_of_pages":575, "created_at":"2022-09-24 09:12:12", "updated_at":"2022-09-24 09:12:12"}]

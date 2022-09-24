@@ -1,0 +1,60 @@
+{% extends "libros_base.html" %}
+{% block titulo %}Menu Libros{% endblock %}
+{% block contenido1%}Menu Principal de Libros{%endblock%}
+
+{% block contenido2 %}
+   <div class = cuerpo>
+      <div class="columna1">
+       <div class="columna1_titulo"><h2>Nuevo Libro</h2></div>
+       <form action="/crearlibro" method="post" onsubmit="return confirm('Desea grabar el registro del Libro?');">
+       <div class="columna1_cuerpo">
+              <div>
+                <div><label for="titulo_libro">Nombre del Libro :</label></div>
+                <div><label for="numero_paginas">Numero de Paginas :</label></div>
+              </div>
+
+              <div>
+               <div><input type="text" name="titulo_libro" id="titulo_libro" required placeholder="titulo del libro"></div>
+               <div><input type="text" name="numero_paginas" id="numero_paginas" required placeholder="0"></div>
+              </div>
+       </div>
+         <div class="columna1_botonpanel"><button type="submmit">Crear</button></div>
+       </form>
+      </div>
+      <div class="columna2">
+         <div><h2>Todos los Libros</h2></div>
+         <div class="contenedor_tabla">
+            <table>
+
+                <thead>
+                   <tr>
+                      <th>Nombre del Libro</th>
+                      <th>Paginas</th>
+                      <th>Opciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                  {%if libros.id != None%}
+                     {%for i in libros%}
+                      <tr id>
+                         <td><a href="/mostrarautoresfavoritoslibro/{{i.id}}">{{i.title}}</a></td>
+                         <td>{{i.num_of_pages}}</td>
+                         <td><a href="/eliminarlibro/{{i.id}}" onclick="return confirm('Desea eliminar el registro?')">Borrar</a></td>
+                      </tr>
+                      {%endfor%}
+                   {%else%}
+                        <tr>
+                           <th colspan="3">No hay Registros para mostrar</th>
+                        </tr>
+                   {%endif%}
+                </tbody>
+            </table>
+
+         </div>
+        <div class="opciones">
+           <div><a href="/limpiar">Home</a></div>
+        </div>
+      </div>
+   </div>
+{%endblock%}

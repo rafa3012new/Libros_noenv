@@ -1,0 +1,176 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.principal{
+    width: 90%;
+    margin: 20px auto 0;
+}
+
+.cabecera{
+    display: flex;
+    height: 100px;
+}
+
+.cabecera{
+    display: flex;
+}
+
+.cabecera h2{
+    padding: 0;
+    margin: 20px 0 0 20px;
+}
+
+.cabecera img{
+    height: 60px;
+    width: 60px;
+}
+
+
+.titulo h1{
+    font-size: 3em;
+}
+
+.cuerpo{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.columna1{
+    width: 50%;
+}
+
+.columna1 div:first-child{
+text-align: center;
+height: 100px;
+padding-top: 10px;
+}
+
+.columna1_cuerpo{
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    gap: 50px;
+    height: 350px;
+    width: 100%;
+}
+
+.columna1_cuerpo div:first-child{
+    height: 50px;
+    line-height: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.columna1_cuerpo div:last-child{
+    height: 50px;
+    line-height: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.columna1_cuerpo div:last-child input{
+    height: 30px;
+    width: 300px;
+    align-self: center;
+}
+
+
+.columna1_botonpanel{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+.columna2{
+    padding-left: 50px;
+}
+
+.columna2_cuerpo{
+    display: flex;
+    margin-top: 60px;
+    height: 30px;
+}
+
+.columna2_botonpanel{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+}
+
+.columna1_botonpanel button{
+    height: 30px;
+    width: 100px;
+    margin-top: 50px;
+}
+
+.columna2{
+    width: 50%;
+}
+
+ .contenedor_tabla{
+    height: 285px;
+    overflow-y:auto;
+  }
+
+  .contenedor_tabla table{
+      border: solid 3px black;
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+
+.contenedor_tabla table td, .contenedor_tabla table th{
+    border-left: 3px solid black;
+}
+
+.contenedor_tabla table thead tr th{
+    background-color: silver;
+    font-size: 1.2em;
+}
+
+.contenedor_tabla table thead th, .contenedor_tabla table tbody tr{ 
+    height: 40px;
+}
+
+
+.contenedor_tabla table tbody tr td{
+    text-align: center;
+}
+
+
+.contenedor_tabla table tbody tr:nth-child(even){
+    background-color: #EEEEEE;
+    border:none
+  }
+
+.opciones{
+    margin-top: 30px;
+}
+
+.boton_especial{
+    background-color:transparent;
+    border: none;
+    color:blue;
+    text-decoration: underline;
+}
+
+.cuerpo_formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cuerpo_formulario form input{
+    width: 600px;
+}
+
+.opciones{
+    display: flex;
+    gap:30px;
+}

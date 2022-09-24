@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{%block titulo%}{%endblock%} - Aplicacion Libros</title>
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/toastr.min.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/libros_autores.css') }}" type="text/css">
+    <script src="{{ url_for('static', filename='js/libros_autores.js') }}"></script>
+</head>
+<body>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.6.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/toastr.min.js') }}"></script>
+
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "progressBar": true,
+        }
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    toastr.{{category}}('{{ message }}', 'Mensaje de Sistema');
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+    </script>
+
+
+    <div class="principal">
+        <div class="cabecera">
+            <div id="divicon"><img id="iconapp" src="{{ url_for('static', filename= 'img/icon_codingdojo.png') }}" alt="imagen de icono no encontrado"></div>
+            <h2>Aplicacion de Libros</h2>
+        </div>
+        <div class="titulo">
+            <h1>{%block contenido1%}{%endblock%}</h1>
+        </div>
+        {%block contenido2%}
+        {%endblock%}
+    </div>
+
+</body>
+</html>

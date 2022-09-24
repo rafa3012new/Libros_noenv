@@ -1,0 +1,52 @@
+{% extends "libros_base.html" %}
+{% block titulo %}Menu Autores{% endblock %}
+{% block contenido1%}Menu Principal de Autores{%endblock%}
+
+{% block contenido2 %}
+   <div class = cuerpo>
+      <div class="columna1">
+         <div class="columna1_titulo"><h2>Nuevo Autor</h2></div>
+         <form action="/crearautor" method="post" onsubmit="return confirm('Desea grabar el registro del Autor?');">
+           <div class="columna1_cuerpo">
+             <div><label for="nombre_autor">Nombre del Autor :</label></div>
+             <div><input type="text" name="nombre_autor" id="nombre_autor" required placeholder="john doe"></div>
+           </div>
+           <div class="columna1_botonpanel"><button type="submmit">Crear</button></div>
+         </form>
+      </div>
+      <div class="columna2">
+         <div><h2>Todos los Autores</h2></div>
+         <div class="contenedor_tabla">
+            <table>
+
+                <thead>
+                   <tr>
+                      <th>Nombre del Autor</th>
+                      <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                  {%if autores.id != None %}
+                     {%for i in autores%}
+                      <tr id>
+                         <td><a href="/mostrarlibrosfavoritosautor/{{i.id}}">{{i.name}}</a></td>
+                         <td><button class="boton_especial" onclick="updatePostName({{i.id}} , this)">Editar</button></td>
+                         <td><a href="/eliminarautor/{{i.id}}" onclick="return confirm('Desea eliminar el registro?')">Borrar</a></td>
+                      </tr>
+                      {%endfor%}
+                   {%else%}
+                        <tr>
+                           <th colspan="3">No hay Registros para mostrar</th>
+                        </tr>
+                   {%endif%}
+                </tbody>
+            </table>
+
+         </div>
+        <div class="opciones">
+           <div><a href="/insertarlibro">Agregar un nuevo Libro</a></div>
+        </div>
+      </div>
+   </div>
+{%endblock%}

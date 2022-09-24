@@ -1,0 +1,72 @@
+{% extends "libros_base.html" %}
+{% block titulo %}Menu Autores que tiene como Favorito un Libro{% endblock %}
+{% block contenido1%}Menu Autores que tienen como Favorito el Libro{%endblock%}
+
+{% block contenido2 %}
+   <div class = cuerpo>
+
+      <div class="columna1">
+         <div><h2>{{libros_con_autores_favoritos.title}}</h2></div>
+         <div class="contenedor_tabla">
+            <table>
+
+                <thead>
+                   <tr>
+                      <th>Nombre del Autor</th>
+                      <th>Opcion</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                  {%if libros_con_autores_favoritos.favorites_authors[0].id == None%}
+                     <tr>
+                        <td colspan="3">No hay Registros para mostrar</td>
+                     </tr>
+                  {%else%}
+                     {%for i in libros_con_autores_favoritos.favorites_authors%}
+                        <tr id>
+                           <td>{{i.name}}</td>
+                            <td><a href="/quitarautorfavorito/{{i.id}}/{{libros_con_autores_favoritos.id}}" onclick="return confirm('Desea eliminar el registro?')">quitar</a></td>
+                        </tr>
+                      {%endfor%}
+                   {%endif%}
+                </tbody>
+            </table>
+
+         </div>
+        <div class="opciones">
+           <div><a href="/limpiar">Home</a></div>
+        </div>
+      </div>
+
+
+      <div class="columna2">
+         <div class="columna2_titulo"><h2>Agregar Autor que tiene como Favorito el Libro</h2></div>
+         <form action="/agregarautorfavorito" method="post" onsubmit="return confirm('Desea grabar el registro del Autor Favorito?');">
+         <div class="columna2_cuerpo">
+                <div>
+                  <div><label for="titulo_libro">Nombre del Autor :</label></div>
+                </div>
+
+                <div>
+                 <div>
+                  <input type="hidden" name="libro_favorito" value="{{libros_con_autores_favoritos.id}}">
+                  <select type="text" name="autor_favorito" id="autor_favorito" required>
+                  {%for i in autores%}
+                      {%if i.name not in lista_autores_favoritos%}
+                        <option value="{{i.id}}">{{i.name}}</option>
+                      {%endif%}
+                  {%endfor%}
+                  </select>
+               </div>
+                </div>
+         </div>
+         <div class="columna2_botonpanel">
+            {%if libros_con_autores_favoritos.favorites_authors|length != autores|length%}
+               <button type="submmit">Agregar</button>
+            {%endif%}
+         </div>
+         </form>
+      </div>
+   </div>
+{%endblock%}
